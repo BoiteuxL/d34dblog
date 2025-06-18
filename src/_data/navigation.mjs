@@ -8,8 +8,8 @@ export default{
       url: '/en/'
     },
     {
-      text: 'About me',
-      url: '/en/about-me/'
+      text: 'Blog',
+      url: '/en/blog/'
     }
   ],
   fr: [
@@ -18,8 +18,8 @@ export default{
       url: '/fr/'
     },
     {
-      text: 'À propos de moi',
-      url: '/fr/a-propos-de-moi/'
+      text: 'Blogue',
+      url: '/fr/blog/'
     }
   ],
 };

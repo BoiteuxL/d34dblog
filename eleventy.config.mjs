@@ -4,6 +4,7 @@ import postcss from 'postcss';
 import tailwindcss from '@tailwindcss/postcss';
 
 import { EleventyI18nPlugin } from '@11ty/eleventy';
+import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
 export default function (eleventyConfig) {
 	eleventyConfig.on('eleventy.before', async () => {
@@ -11,6 +12,7 @@ export default function (eleventyConfig) {
 		const tailwindOutputPath = './dist/assets/css/tailwind.css';
 		const cssContent = fs.readFileSync(tailwindInputPath, 'utf8');
 		const outputDir = path.dirname(tailwindOutputPath);
+		
 
 		if (!fs.existsSync(outputDir)) {
 			fs.mkdirSync(outputDir, { recursive: true });
@@ -24,9 +26,13 @@ export default function (eleventyConfig) {
 		fs.writeFileSync(tailwindOutputPath, result.css);
 	});
 
+	eleventyConfig.addPlugin(syntaxHighlight);
+
 	eleventyConfig.addPlugin(EleventyI18nPlugin, {
 		defaultLanguage: 'fr' // Required
 	});
+	
+	eleventyConfig.addPassthroughCopy({ "./src/scripts/": "/scripts/" });
 
 	return {
 		dir: {

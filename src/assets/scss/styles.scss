@@ -9,9 +9,7 @@ a {
 
 header {
     a {
-        color: var(--text-base);
         text-decoration: none;
-        font-weight: bold;
     }
 }
 
@@ -22,4 +20,15 @@ header {
 .container {
     max-width: 72rem;
     line-height: 1.5;
+    padding: 0 3rem;
+    margin: auto;
+}
+
+
+
+@media screen and (max-width: 64rem) {
+    .container {
+        max-width: 48rem;
+    }
+
 }

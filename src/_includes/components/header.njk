@@ -1,19 +1,26 @@
 <header class="bg-base-200 rounded-b-2xl p-8 mb-16">
     <nav class="flex justify-between items-center nav-bar">
         <div class="flex items-center">
-            <a href="/" class="text-2xl">Loïc Boiteux</a>
+            <h1>
+                <a href="{{ navigation[page.lang][0].url }}" class="font-bold text-3xl">Loïc Boiteux</a>
+            </h1>
         </div>
         <div class="flex items-center space-x-4">
-            <ul class="flex space-x-4">
+            <ul class="flex space-x-4 align-middle">
                 {% for item in navigation[page.lang] %}
-                    <li>
-                        <a class="text-base" href="{{ item.url }}">{{ item.text }}</a>
-                    </li>
+                    {% if not loop.first %}
+                        <li>
+                            <a class="font-bold text-xl" href="{{ item.url }}">{{ item.text }}</a>
+                        </li>
+                    {% endif %}
                 {% endfor %}
                 <li>
-                    <a href="https://github.com/BoiteuxL">GitHub</a>
+                    <a class="font-bold text-xl" href="https://github.com/BoiteuxL">GitHub</a>
                 </li>
             </ul>
+            <button class="btn btn-primary btn-circle" id="toggle-theme-btn">
+                <i id="toggle-theme-icon" class="material-icons"></i>
+            </button>
         </div>
     </nav>
 </header>
