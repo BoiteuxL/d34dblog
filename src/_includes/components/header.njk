@@ -1,0 +1,19 @@
+<header class="bg-base-200 rounded-b-2xl p-8 mb-16">
+    <nav class="flex justify-between items-center nav-bar">
+        <div class="flex items-center">
+            <a href="/" class="text-2xl">Loïc Boiteux</a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <ul class="flex space-x-4">
+                {% for item in navigation[page.lang] %}
+                    <li>
+                        <a class="text-base" href="{{ item.url }}">{{ item.text }}</a>
+                    </li>
+                {% endfor %}
+                <li>
+                    <a href="https://github.com/BoiteuxL">GitHub</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</header>
