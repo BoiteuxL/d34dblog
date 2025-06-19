@@ -10,6 +10,10 @@ export default{
     {
       text: 'Blog',
       url: '/en/blog/'
+    },
+    {
+      text: 'Projects',
+      url: '/en/projects/'
     }
   ],
   fr: [
@@ -20,6 +24,10 @@ export default{
     {
       text: 'Blogue',
       url: '/fr/blog/'
+    },
+    {
+      text: 'Projets',
+      url: '/fr/projects/'
     }
   ],
 };

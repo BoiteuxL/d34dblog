@@ -4,10 +4,8 @@ description: 'The place where I ramble about anything that comes to my mind.'
 permalink: /en/blog/index.html
 ---
 
-<section>
-    <h2 class="text-4xl font-bold">Blog</h2>
-    <p class="text-lg">The place where I ramble about anything that comes to my mind.</p>
-</section>
+<h2 class="text-4xl font-bold mb-4">Blog</h2>
+<p class="text-lg">The place where I ramble about anything that comes to my mind.</p>
 <section>
     {%- for post in collections["post-en"] -%}
     <article>

@@ -1,5 +1,6 @@
 export default {
     url: process.env.URL || 'http://localhost:8080',
+    title: 'Loïc Boiteux',
 
     en: {
         locale: 'en',

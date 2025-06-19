@@ -1,5 +1,4 @@
 ---
-title: 'Page Française'
 description: 'Ceci est la version française de la page d’accueil'
 permalink: /fr/index.html
 ---

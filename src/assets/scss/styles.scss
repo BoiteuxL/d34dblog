@@ -13,22 +13,19 @@ header {
     }
 }
 
-
-
-// Override
-
-.container {
+.main-container {
     max-width: 72rem;
     line-height: 1.5;
-    padding: 0 3rem;
+    padding: 0 8rem;
+    margin: auto;
+}
+
+.header-container {
+    line-height: 1.5;
     margin: auto;
 }
 
 
-
-@media screen and (max-width: 64rem) {
-    .container {
-        max-width: 48rem;
-    }
-
+main {
+    line-height: 1.6;
 }

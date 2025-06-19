@@ -4,10 +4,8 @@ description: "L'endroit où je parle de tout ce qui me passe par la tête."
 permalink: /fr/blog/index.html
 ---
 
-<section>
-    <h2 class="text-4xl font-bold">Blogue</h2>
-    <p class="text-lg">L'endroit où je parle de tout ce qui me passe par la tête.</p>
-</section>
+<h2 class="text-4xl font-bold mb-4">Blogue</h2>
+<p class="text-lg">L'endroit où je parle de tout ce qui me passe par la tête.</p>
 <section>
     {%- for post in collections["post-fr"] -%}
     <article>
