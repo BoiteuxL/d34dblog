@@ -14,8 +14,7 @@ header {
 }
 
 .main-container {
-    max-width: 76rem;
-    line-height: 1.5;
+    max-width: 67rem;
     padding: 0 4rem;
     margin: auto;
 }
@@ -27,5 +26,12 @@ header {
 
 
 main {
-    line-height: 1.6;
+    * {
+        line-height: 1.8;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
 }
+
