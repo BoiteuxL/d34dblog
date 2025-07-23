@@ -8,11 +8,11 @@
         </p>
         {% if page.lang == "en" %}
             <p class="text-center text-sm text-shadow-neutral-50">
-                Built with 11ty on {{ meta[page.lang].buildDate }}
+                Built with <a href="https://www.11ty.dev/" target="_blank">11ty</a> on {{ meta[page.lang].buildDate }}
             </p>
         {% else %}
             <p class="text-center text-sm text-shadow-neutral-50">
-                Site généré avec 11ty le
+                Site généré avec <a href="https://www.11ty.dev/" target="_blank">11ty</a> le
                 {{ meta[page.lang].buildDate }}
             </p>
         {% endif %}
