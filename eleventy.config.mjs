@@ -8,13 +8,20 @@ import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 
 export default function (eleventyConfig) {
 	eleventyConfig.addPlugin(syntaxHighlight);
-
 	eleventyConfig.addPlugin(EleventyI18nPlugin, {
 		defaultLanguage: 'fr' // Required
 	});
 
 	eleventyConfig.addPassthroughCopy({ "./src/scripts/": "/scripts/" });
 	eleventyConfig.addPassthroughCopy({ "./src/assets/": "/assets/" });
+
+
+	eleventyConfig.addCollection("projects-fr", function (collectionAPI) {
+  		return collectionAPI.getFilteredByGlob("./src/fr/projects/*.project.html");
+	});
+	eleventyConfig.addCollection("projects-en", function (collectionAPI) {
+  		return collectionAPI.getFilteredByGlob("./src/en/projects/*.project.html");
+	});
 
 	eleventyConfig.on('eleventy.after', async () => {
 		const tailwindInputPath = path.resolve('./src/assets/css/tailwind.css');

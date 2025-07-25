@@ -1,0 +1,56 @@
+{% block content %}
+    <article>
+    <h2 class="text-4xl font-bold mb-4">{{title}}</h2>
+
+    <p class="text-lg">
+        {{description}}
+    </p>
+    {% if page.lang == "en" %}
+        <a href="{{repository}}">
+            View on GitHub
+        </a>
+    {% else %}
+        <a href="{{repository}}">
+            Voir sur GitHub
+        </a>
+    {% endif %}
+        <section id="table">
+            {% if page.lang == "en" %}
+                <h3 class="text-2xl font-bold">Table of content</h3>
+            {% else %}
+                <h3 class="text-2xl font-bold">Table des matières</h3>
+            {% endif %}
+            {% block table %}
+            {% endblock %}
+        </section>
+        <section id="whatisit">
+            {% if page.lang == "en" %}
+                <h3 class="text-2xl font-bold">What is it?</h3>
+            {% else %}
+                <h3 class="text-2xl font-bold">C'est quoi?</h3>
+            {% endif %}
+            {% block whatisit %}
+            {% endblock %}
+        </section>
+        <section id="features">
+            {% if page.lang == "en" %}
+                <h3 class="text-2xl font-bold">Features</h3>
+            {% else %}
+                <h3 class="text-2xl font-bold">Fonctionnalités</h3>
+            {% endif %}
+            {% block features %}
+            {% endblock %}
+        </section>
+        <section id="technologies">
+            {% if page.lang == "en" %}
+                <h3 class="text-2xl font-bold">Technologies used</h3>
+            {% else %}
+                <h3 class="text-2xl font-bold">Technologies utilisées</h3>
+            {% endif %}
+            {% block technologies %}
+            {% endblock %}
+        </section>
+    </article>
+    {% block more %}
+    {% endblock %}
+{% endblock %}

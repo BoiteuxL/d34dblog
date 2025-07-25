@@ -1,0 +1,17 @@
+---
+title: 'Projects'
+description: "A incomplete list of all my (sometimes) interesting projects."
+permalink: /en/projects/index.html
+---
+<h2 class="text-4xl font-bold mb-4">Projets</h2>
+<p class="text-lg">
+    A incomplete list of all my (sometimes) interesting projects.
+</p>
+<section>
+    {%- for project in collections["projects-en"] -%}
+    <article class="flex gap-4 items-baseline">
+        <h3 class="text-2xl font-bold"><a href="{{project.data.permalink}}">{{ project.data.title }}</a></h3>
+        <p class="italic light">{{ project.data.description }}</p>
+    </article>
+    {%- endfor -%}
+</section>

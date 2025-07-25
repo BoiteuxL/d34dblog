@@ -1,0 +1,138 @@
+---
+title: 'Dotfiles'
+description: "Fichiers de configuration pour GNU/Linux (Gnome)"
+permalink: /fr/projects/dotfiles.html
+repository: "https://github.com/BoiteuxL/dotfiles"
+---
+{% extends "project.njk" %}
+
+{% block table %}
+<ul class="pl-5 space-y-1 list-inside">
+    <li>
+        <a href="#whatisit">C'est quoi?</a>
+    </li>
+    <li>
+        <a href="#features">Fonctionnalités</a>
+        <ul class="pl-5 space-y-1 list-inside">
+            <li><a href="#de">Distribution et environnement de bureau</a></li>
+            <li><a href="#theme-and-icons">Thème et icônes</a></li>
+            <li><a href="#extensions">Extensions</a></li>
+        </ul>
+    </li>
+    <li>
+        <a href="#technologies">Technologies utilisées</a>
+    </li>
+</ul>
+{% endblock %}
+
+{% block whatisit %}
+<p>
+    Mes fichiers de configuration personnels pour GNU/Linux, spécifiquement adaptés à
+    l'environnement de bureau Gnome.
+    Ces fichiers incluent des paramètres et des personnalisations qui améliorent mon
+    flux de travail quotidien et mon expérience utilisateur tout en offrant une belle interface graphique.
+</p>
+{% endblock %}
+
+{% block features %}
+<section id="de-and-distro">
+    <h4>Distribution et environnement de bureau</h4>
+    <p>
+        Lorsque j'ai dû choisir une distribution Linux, j'ai toujours eu du mal à
+        trouver celle qui correspondait à mes besoins. J'en ai essayé beaucoup, comme Debian,
+        Ubuntu, Fedora, Linux Mint et même Arch Linux. Je me suis finalement tourné vers
+        EndeavourOS, qui est basé sur Arch Linux et offre une expérience conviviale
+        tout en conservant la flexibilité et la puissance d'Arch. J'utilise
+        EndeavourOS depuis un certain temps maintenant, et je suis très satisfait de ses
+        performances et de sa stabilité. C'est devenu ma distribution de prédilection pour
+        mon ordinateur portable et mes ordinateurs de bureau.
+    </p>
+    <p>
+        J'utilise Gnome comme environnement de bureau. Bien que j'aie essayé d'autres
+        environnements comme KDE, Cinnamon et même des gestionnaires de fenêtres comme i3 et
+        Hyprland,
+        je trouve Gnome le plus adapté à mes besoins. Il est fluide, élégant,
+        esthétiquement agréable par défaut et les multiples espaces de travail sont indispensables pour moi.
+    </p>
+
+</section>
+<section id="theme-and-icons">
+    <h4>Thème et icônes</h4>
+    <p>
+        J'utilise le thème Catppuccin Mocha avec un accent violet, qui offre une
+        palette de couleurs pastel apaisante qui est agréable à l'oeil et belle à regarder.
+        Le thème est complété par l'ensemble d'icônes Tela (Dracula), qui offre un
+        look épuré et moderne qui complète l'esthétique générale.
+    </p>
+
+    <p>
+        De plus, je suis un grand fan de Star Wars, alors, pour mon ordinateur portable (nommé
+        <i>Acclamator</i>), j'ai ajouté un petit fond d'écran
+        mettant en vedette le <i>vaisseau d'assaut de classe Acclamator.</i>
+    </p>
+    <figure class="max-w-full mx-auto my-5">
+        <img class="h-auto max-w-full rounded-lg"
+            src="/assets/img/projects/dotfiles/laptop.png"
+            alt="Capture d'écran de mon ordinateur portable">
+        <figcaption
+            class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Capture
+            d'écran de l'ordinateur portable</figcaption>
+    </figure>
+
+    <p>
+        Et pour mon ordinateur de bureau (nommé <i>Venator</i>), j'ai un fond d'écran
+        mettant en vedette le
+        <i>Destroyer stellaire de classe Venator</i>.
+    </p>
+    <figure class="max-w-full mx-auto my-5">
+        <img class="h-auto max-w-full rounded-lg"
+            src="/assets/img/projects/dotfiles/desktop.png"
+            alt="Capture d'écran de mon ordinateur de bureau">
+        <figcaption
+            class="mt-2 text-sm text-center text-gray-500 dark:text-gray-400">Capture
+            d'écran de l'ordinateur de bureau</figcaption>
+    </figure>
+    <p>
+        J'ai aussi quelques fichiers de configuration pour divers applications, tel que Git, Starship our Fastfetch.
+    </p>
+</section>
+<section id="extensions">
+    <h4>Extensions</h4>
+    <p>
+        Gnome permet aux utilisateurs de personnaliser et d'améliorer l'environnement de bureau en
+        installant des extensions.
+        Ils offrent une flexibilité pour adapter l'interface aux préférences individuelles,
+        telles que l'ajout d'applets, la modification de la gestion des fenêtres ou
+        l'intégration d'outils de productivité.
+        J'ai sélectionné une série d'extensions qui améliorent mon flux de travail et mon
+        expérience utilisateur. Certaines extensions que j'utilise incluent :
+    </p>
+    <ul class="max-w-md pl-5 space-y-1 list-disc list-inside">
+        <li><a target="_blank"
+                href="https://extensions.gnome.org/extension/307/dash-to-dock/">Dash
+                to Dock</a></li>
+        <li><a target="_blank"
+                href="https://extensions.gnome.org/extension/3843/just-perfection/">Just
+                Perfection</a></li>
+        <li><a target="_blank"
+                href="https://extensions.gnome.org/extension/4481/forge/">Forge</a></li>
+        <li><a target="_blank"
+                href="https://extensions.gnome.org/extension/19/user-themes/">User
+                Themes</a></li>
+        <li><a target="_blank"
+                href="https://extensions.gnome.org/extension/2986/runcat/">Runcat</a></li>
+    </ul>
+</section>
+
+{% endblock %}
+
+{% block technologies %}
+<p>
+    Ce projet est juste un ensemble de scripts Bash qui installent des paquets,
+    téléchargent des thèmes et des icônes, importent des paramètres et installent des extensions.
+    Il est conçu pour être exécuté sur une nouvelle installation d'EndeavourOS avec Gnome.
+</p>
+{% endblock %}
+
+{% block more %}
+{% endblock %}
