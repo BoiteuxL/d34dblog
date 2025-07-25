@@ -55,6 +55,12 @@ main {
     }
 }
 
+@media screen and (max-width: 450px) {
+    .responsive-hidden {
+        display: none;
+    }
+}
+
 .light {
     color: #a6adc8
 }
