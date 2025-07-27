@@ -12,15 +12,21 @@ export default function (eleventyConfig) {
 		defaultLanguage: 'fr' // Required
 	});
 
+	
 	eleventyConfig.addPassthroughCopy({ "./src/scripts/": "/scripts/" });
 	eleventyConfig.addPassthroughCopy({ "./src/assets/": "/assets/" });
 
 
-	eleventyConfig.addCollection("projects-fr", function (collectionAPI) {
-  		return collectionAPI.getFilteredByGlob("./src/fr/projects/*.project.html");
+	eleventyConfig.addCollection('projects-en', function (collectionApi) {
+		return collectionApi.getAll().filter(item => {
+			return item.data.tags && item.data.language === 'en' && item.data.tags.includes('project');
+		});
 	});
-	eleventyConfig.addCollection("projects-en", function (collectionAPI) {
-  		return collectionAPI.getFilteredByGlob("./src/en/projects/*.project.html");
+
+	eleventyConfig.addCollection('projects-fr', function (collectionApi) {
+		return collectionApi.getAll().filter(item => {
+			return item.data.tags && item.data.language === 'fr' && item.data.tags.includes('project');
+		});
 	});
 
 	eleventyConfig.on('eleventy.after', async () => {
