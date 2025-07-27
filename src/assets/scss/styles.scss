@@ -1,3 +1,4 @@
+@import "https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap";
 a {
     color: var(--color-primary);
     text-decoration: underline;
@@ -8,6 +9,8 @@ a {
 }
 
 header {
+
+    font-family: "Atkinson Hyperlegible", sans-serif;
     a {
         text-decoration: none;
     }
@@ -27,6 +30,8 @@ html { scroll-behavior: smooth; }
 
 
 main {
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    
     * {
         line-height: 1.8;
     }
@@ -56,6 +61,14 @@ main {
 
     p {
         font-size: 1.125rem;
+    }
+
+    ul {
+        margin-left: 2rem;
+        list-style-type: disc;
+        li {
+            font-size: 1.125rem;
+        }
     }
 }
 

@@ -1,6 +1,6 @@
 ---
 title: "Dotfiles"
-description: "Fichiers de configuration pour GNU/Linux (Gnome)"
+description: "Fichiers de configuration pour GNU/Linux (Gnome)."
 permalink: /{{language}}/projects/dotfiles/
 repository: "https://github.com/BoiteuxL/dotfiles"
 language: fr
@@ -9,8 +9,8 @@ tags:
 ---
 {% import "macros/media.njk" as media %}
 
-# Dotfiles
-
+# [{{title}}]({{repository}})
+{{description}}
 
 ## Résumé
 Mes fichiers de configuration personnels pour GNU/Linux, spécifiquement adaptés à l'environnement de bureau Gnome. Ces fichiers incluent des paramètres et des personnalisations qui améliorent mon flux de travail quotidien et mon expérience utilisateur tout en offrant une belle interface graphique.

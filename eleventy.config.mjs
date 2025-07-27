@@ -5,6 +5,8 @@ import tailwindcss from '@tailwindcss/postcss';
 
 import { EleventyI18nPlugin } from '@11ty/eleventy';
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
+import markdownIt from 'markdown-it';
+import markdownItLinkAttributes from 'markdown-it-link-attributes';
 
 export default function (eleventyConfig) {
 	eleventyConfig.addPlugin(syntaxHighlight);
@@ -12,7 +14,18 @@ export default function (eleventyConfig) {
 		defaultLanguage: 'fr' // Required
 	});
 
-	
+	eleventyConfig.setLibrary("md", markdownIt({
+        html: true,
+        breaks: true,
+        linkify: true
+      }).use(markdownItLinkAttributes, {
+        pattern: /^https?:\/\//, // Apply to all external links
+        attrs: {
+          target: '_blank',
+          rel: 'noopener'
+        }
+      }));
+
 	eleventyConfig.addPassthroughCopy({ "./src/scripts/": "/scripts/" });
 	eleventyConfig.addPassthroughCopy({ "./src/assets/": "/assets/" });
 
