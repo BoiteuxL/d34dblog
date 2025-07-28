@@ -5,7 +5,7 @@
                 <a href="{{ navigation[page.lang][0].url }}" class="font-bold text-3xl">Loïc Boiteux</a>
             </h1>
             <div class="flex items-center justify-center sm:justify-between w-full sm:w-auto gap-2">
-                <ul class="flex font-medium p-4 rounded-lg gap-2 rtl:space-x-reverse flex-row ">
+                <ul class="flex font-medium p-4 rounded-lg space-x-4 rtl:space-x-reverse flex-row ">
                     {% for item in navigation[page.lang] %}
                         {% if not loop.first %}
                             <li class="nav-item md:my-0 rounded-lg md:bg-base-200 md:py-0 md:px-0">
@@ -14,7 +14,7 @@
                         {% endif %}
                     {% endfor %}
                 </ul>
-                <div class="flex items-center space-x-4 responsive-hidden">
+                <div class="flex items-center responsive-hidden">
                     <button class="btn btn-primary btn-circle mx-2" id="toggle-theme-btn">
                         <i id="toggle-theme-icon" class="material-icons"></i>
                     </button>
