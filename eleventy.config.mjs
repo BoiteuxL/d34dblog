@@ -33,12 +33,16 @@ export default function (eleventyConfig) {
 	eleventyConfig.addCollection('projects-en', function (collectionApi) {
 		return collectionApi.getAll().filter(item => {
 			return item.data.tags && item.data.language === 'en' && item.data.tags.includes('project');
+		}).sort((a, b) => {
+			return a.data.title.localeCompare(b.data.title)
 		});
 	});
 
 	eleventyConfig.addCollection('projects-fr', function (collectionApi) {
 		return collectionApi.getAll().filter(item => {
 			return item.data.tags && item.data.language === 'fr' && item.data.tags.includes('project');
+		}).sort((a, b) => {
+			return a.data.title.localeCompare(b.data.title)
 		});
 	});
 
