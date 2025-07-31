@@ -4,8 +4,8 @@
   "description": "A small blog and personal website I'm working on",
   "main": "index.js",
   "scripts": {
-    "watch:sass": "sass --watch src/assets/scss:dist/assets/css",
-    "build:sass": "sass src/assets/scss:dist/assets/css",
+    "watch:sass": "sass --watch --poll src/assets/scss:dist/assets/css",
+    "build:sass": "sass src/assets/scss/styles.scss:dist/assets/css/styles.css --style=compressed --no-source-map",
     "watch:eleventy": "eleventy --serve",
     "build:eleventy": "eleventy",
     "dev": "npm-run-all build:sass --parallel watch:*",
@@ -36,7 +36,9 @@
   "devDependencies": {
     "@tailwindcss/typography": "^0.5.16",
     "autoprefixer": "^10.4.21",
+    "css-minify": "^2.1.0",
     "daisyui": "^5.0.43",
+    "html-minifier-terser": "^7.2.0",
     "postcss": "^8.5.6",
     "tailwindcss": "^4.1.10"
   }

@@ -1,25 +1,21 @@
 @use "palette" as *;
-@forward "typography";
-@forward "colours";
-@forward "header";
-@forward "footer";
+@import "https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap";
+@import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
-html { scroll-behavior: smooth; }
-* {
-    margin: 0;
+
+
+a {
+    font-weight: bolder;
+    color: $link-color;
+    &:hover {
+        color: $link-hover-color;
+        text-decoration: none;
+    }
 }
 
-.main-container {
-    max-width: 67rem;
-    padding: 0 4rem;
-    margin: auto;
+header, main, footer {
+    font-family: "Atkinson Hyperlegible", sans-serif;
 }
-
-.header-container {
-    line-height: 1.5;
-    margin: auto;
-}
-
 
 main {
     font-family: "Atkinson Hyperlegible", sans-serif;
@@ -63,14 +59,3 @@ main {
         }
     }
 }
-
-@media screen and (max-width: 450px) {
-    .responsive-hidden {
-        display: none;
-    }
-}
-
-.light {
-    color: #a6adc8
-}
-

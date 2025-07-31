@@ -1,12 +1,8 @@
-import fs from 'fs';
-import path from 'path';
-import postcss from 'postcss';
-import tailwindcss from '@tailwindcss/postcss';
-
 import { EleventyI18nPlugin } from '@11ty/eleventy';
 import syntaxHighlight from "@11ty/eleventy-plugin-syntaxhighlight";
 import markdownIt from 'markdown-it';
 import markdownItLinkAttributes from 'markdown-it-link-attributes';
+import htmlmin from "html-minifier-terser";
 
 export default function (eleventyConfig) {
 	eleventyConfig.addPlugin(syntaxHighlight);
@@ -26,8 +22,8 @@ export default function (eleventyConfig) {
         }
       }));
 
-	eleventyConfig.addPassthroughCopy({ "./src/scripts/": "/scripts/" });
-	eleventyConfig.addPassthroughCopy({ "./src/assets/": "/assets/" });
+	eleventyConfig.addPassthroughCopy({ "./src/assets/css/styles.min.css": "/assets/css/styles.css" });
+	eleventyConfig.addPassthroughCopy({ "./src/assets/img": "/assets/img" });
 
 
 	eleventyConfig.addCollection('projects-en', function (collectionApi) {
@@ -46,23 +42,19 @@ export default function (eleventyConfig) {
 		});
 	});
 
-	eleventyConfig.on('eleventy.after', async () => {
-		const tailwindInputPath = path.resolve('./src/assets/css/tailwind.css');
-		const tailwindOutputPath = './dist/assets/css/tailwind.css';
-		const cssContent = fs.readFileSync(tailwindInputPath, 'utf8');
-		const outputDir = path.dirname(tailwindOutputPath);
+	eleventyConfig.addTransform("htmlmin", function (content) {
+		if ((this.page.outputPath || "").endsWith(".html")) {
+			let minified = htmlmin.minify(content, {
+				useShortDoctype: true,
+				removeComments: true,
+				collapseWhitespace: true,
+			});
 
-
-		if (!fs.existsSync(outputDir)) {
-			fs.mkdirSync(outputDir, { recursive: true });
+			return minified;
 		}
 
-		const result = await postcss([tailwindcss()]).process(cssContent, {
-			from: tailwindInputPath,
-			to: tailwindOutputPath,
-		});
-
-		fs.writeFileSync(tailwindOutputPath, result.css);
+		// If not an HTML output, return content as-is
+		return content;
 	});
 
 	return {

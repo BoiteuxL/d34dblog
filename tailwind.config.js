@@ -1,1 +1,0 @@
-content: ["./src/**/*.{njk,md,html}", "./src/**/*.svg",]
