@@ -1,20 +1,18 @@
 <footer>
-    <div class="container mx-auto py-4">
-        <p class="text-center text-sm text-shadow-neutral-50">
-            {{ languages[page.lang].availableText }}
-            {% for link in page.url | locale_links %}
-                <a href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">{{ link.label }}</a>
-            {% endfor %}
+    <p>
+        {{ languages[page.lang].availableText }}
+        {% for link in page.url | locale_links %}
+            <a href="{{ link.url }}" lang="{{ link.lang }}" hreflang="{{ link.lang }}">{{ link.label }}</a>
+        {% endfor %}
+    </p>
+    {% if page.lang == "en" %}
+        <p>
+            Built with <a href="https://www.11ty.dev/" target="_blank">11ty</a> on {{ meta[page.lang].buildDate }}
         </p>
-        {% if page.lang == "en" %}
-            <p class="text-center text-sm text-shadow-neutral-50">
-                Built with <a href="https://www.11ty.dev/" target="_blank">11ty</a> on {{ meta[page.lang].buildDate }}
-            </p>
-        {% else %}
-            <p class="text-center text-sm text-shadow-neutral-50">
-                Site généré avec <a href="https://www.11ty.dev/" target="_blank">11ty</a> le
-                {{ meta[page.lang].buildDate }}
-            </p>
-        {% endif %}
-    </div>
+    {% else %}
+        <p>
+            Site généré avec <a href="https://www.11ty.dev/" target="_blank">11ty</a> le
+            {{ meta[page.lang].buildDate }}
+        </p>
+    {% endif %}
 </footer>
