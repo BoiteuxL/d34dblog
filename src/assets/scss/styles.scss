@@ -11,8 +11,8 @@ html { scroll-behavior: smooth; }
 }
 
 main, footer {
-    //animation-name: appear-translate;
-    //animation-duration: 0.3s;
+    animation-name: appear-translate;
+    animation-duration: 0.3s;
 }
 
 @keyframes appear-translate {
