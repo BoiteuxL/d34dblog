@@ -2,7 +2,8 @@
 created-on: 2025-07-29T22:37
 modified-on: 2025-07-29T22:55
 tags:
-  - project
+  - Article
+  - Website/Project
 title: D34dBlog
 description: Site web et blog personnel.
 permalink: /{{lang}}/projects/d34dblog/

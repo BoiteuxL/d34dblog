@@ -5,7 +5,8 @@ permalink: /{{language}}/projects/dotfiles/
 repository: "https://github.com/BoiteuxL/dotfiles"
 language: fr
 tags:
-  - project
+  - Article
+  - Website/Project
 ---
 {% import "macros/media.njk" as media %}
 

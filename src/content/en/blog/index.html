@@ -8,10 +8,10 @@ permalink: /en/blog/index.html
 <p>The place where I ramble about anything that comes to my mind.</p>
 <hr>
 <section>
-    {%- for post in collections["post-en"] -%}
+    {%- for post in collections["blogposts-en"] -%}
     <article>
-        <time class="text-sm italic">{{ post.data.time }}</time>
-        <h3 class="font-bold"><a>{{ post.data.title }}</a></h3>
+        <h3><a>{{ post.data.title }}</a></h3>
+        <em><time datetime="{{ post.data["modified-on"] }}">{{ post.data["modified-on"] | formatDate('en-CA') }}</time></em>
     </article>
     {%- endfor -%}
 </section>

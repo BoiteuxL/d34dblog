@@ -28,7 +28,7 @@ export default function (eleventyConfig) {
 
 	eleventyConfig.addCollection('projects-en', function (collectionApi) {
 		return collectionApi.getAll().filter(item => {
-			return item.data.tags && item.data.language === 'en' && item.data.tags.includes('project');
+			return item.data.tags && item.data.language === 'en' && item.data.tags.includes('Website/Project');
 		}).sort((a, b) => {
 			return a.data.title.localeCompare(b.data.title)
 		});
@@ -36,9 +36,25 @@ export default function (eleventyConfig) {
 
 	eleventyConfig.addCollection('projects-fr', function (collectionApi) {
 		return collectionApi.getAll().filter(item => {
-			return item.data.tags && item.data.language === 'fr' && item.data.tags.includes('project');
+			return item.data.tags && item.data.language === 'fr' && item.data.tags.includes('Website/Project');
 		}).sort((a, b) => {
 			return a.data.title.localeCompare(b.data.title)
+		});
+	});
+
+		eleventyConfig.addCollection('blogposts-en', function (collectionApi) {
+		return collectionApi.getAll().filter(item => {
+			return item.data.tags && item.data.language === 'en' && item.data.tags.includes('Website/Blog');
+		}).sort((a, b) => {
+			return (new Date(a.data["modified-on"]).getTime - new Date(b.data["modified-on"]).getTime)
+		});
+	});
+
+	eleventyConfig.addCollection('blogposts-fr', function (collectionApi) {
+		return collectionApi.getAll().filter(item => {
+			return item.data.tags && item.data.language === 'fr' && item.data.tags.includes('Website/Blog');
+		}).sort((a, b) => {
+			return (new Date(a.data["modified-on"]).getTime - new Date(b.data["modified-on"]).getTime)
 		});
 	});
 
@@ -55,6 +71,15 @@ export default function (eleventyConfig) {
 
 		// If not an HTML output, return content as-is
 		return content;
+	});
+
+	
+	eleventyConfig.addFilter("formatDate", (date, format) => {
+		return new Date(date).toLocaleDateString(format, {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric'
+		});
 	});
 
 	return {
