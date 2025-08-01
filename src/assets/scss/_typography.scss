@@ -1,6 +1,7 @@
 @use "palette" as *;
 @import "https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap";
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
+@import "https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap";
 
 
 .light {
@@ -68,4 +69,42 @@ main {
 
 s {
     color: $error-color;
+}
+
+.code-snippet {
+    width: full;
+    border-radius: 1rem;
+    line-height: 1 !important;
+    padding: 1rem 3rem;
+    background-color: $crust;
+    font-family: "JetBrains Mono", Consolas, monospace;
+    color: $text-color !important;
+    text-decoration: none !important;
+
+    code {
+        white-space: pre-wrap;
+        font-family: "JetBrains Mono", Consolas, monospace;
+    }
+
+    span.red {
+        color: $red !important;
+    }
+    span.green {
+        color: $green !important;
+    }
+    span.yellow {
+        color: $yellow !important;
+    }
+    span.blue {
+        color: $blue !important;
+    }
+    span.purple {
+        color: $mauve !important;
+    }
+    span.orange {
+        color: $peach !important;
+    }
+    span.grey, span.gray {
+        color: $text-color-light;
+    }
 }
