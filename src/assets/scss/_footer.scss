@@ -6,4 +6,15 @@ footer {
     p {
         text-align: center;
     }
+
+    .menu {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        justify-content: center;
+        a {
+            display: block;
+            padding: 0.5rem;
+        }
+    }
 }

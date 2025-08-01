@@ -3,15 +3,16 @@ title: 'Projects'
 description: "A incomplete list of all my (sometimes) interesting projects."
 permalink: /en/projects/index.html
 ---
-<h1 class="text-4xl font-bold mb-4">Projets</h1>
-<p class="text-lg">
+<h1>Projets</h1>
+<p>
     A incomplete list of all my (sometimes) interesting projects.
 </p>
+<hr>
 <section>
     {%- for project in collections["projects-en"] -%}
-    <article class="flex gap-4 items-baseline">
-        <h3 class="text-2xl font-bold"><a href="{{project.url}}">{{ project.data.title }}</a></h3>
-        <p class="italic light md:block hidden">{{ project.data.description }}</p>
+    <article>
+        <h3><a href="{{project.url}}">{{ project.data.title }}</a></h3>
+        <em class="light">{{ project.data.description }}</em>
     </article>
     {%- endfor -%}
 </section>

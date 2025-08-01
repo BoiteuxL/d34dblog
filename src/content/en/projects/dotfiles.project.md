@@ -9,8 +9,10 @@ tags:
 ---
 {% import "macros/media.njk" as media %}
 
-# [{{title}}]({{repository}})
-{{description}}
+# {{title}}
+{{description}} [Github]({{repository}})
+
+---
 
 ## Summary
 My personal configuration files for GNU/Linux, specifically tailored to the Gnome desktop environment. These files include settings and customizations that enhance my daily workflow and user experience while providing a beautiful graphical interface.
@@ -26,14 +28,14 @@ I use the Catppuccin Mocha theme with the mauve accent, which gives me a soothin
 
 Additionally, I am a big Star Wars fan, so for my laptop (named *Acclamator*), I added a wallpaper featuring the *Acclamator-class assault ship*.
 {{ media.image(
-        "/assets/img/projects/dotfiles/laptop.png",
+        "/assets/images/projects/dotfiles/laptop.png",
         "Screenshot of my laptop",
         "Screenshot of my laptop"
 ) }}
 
 And for my desktop (named *Venator*), I have a wallpaper featuring the *Venator-class Star Destroyer*.
 {{ media.image(
-        "/assets/img/projects/dotfiles/desktop.png",
+        "/assets/images/projects/dotfiles/desktop.png",
         "Screenshot of my desktop",
         "Screenshot of my desktop"
 ) }}

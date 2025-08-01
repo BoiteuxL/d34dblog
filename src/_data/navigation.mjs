@@ -8,13 +8,13 @@ export default{
       url: '/en/'
     },
     {
+      text: 'Projects',
+      url: '/en/projects/'
+    },
+    {
       text: 'Blog',
       url: '/en/blog/'
     },
-    {
-      text: 'Projects',
-      url: '/en/projects/'
-    }
   ],
   fr: [
     {
@@ -22,12 +22,12 @@ export default{
       url: '/fr/'
     },
     {
-      text: 'Blogue',
-      url: '/fr/blog/'
-    },
-    {
       text: 'Projets',
       url: '/fr/projects/'
+    },
+    {
+      text: 'Blogue',
+      url: '/fr/blog/'
     }
   ],
 };

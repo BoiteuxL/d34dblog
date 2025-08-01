@@ -1,67 +1,32 @@
 @use "palette" as *;
 
 header {
-    background-color: $header-background;
-    margin: 0;
-    a {
-        text-decoration: none;
-    }
-    li {
-        list-style: none;
-    }
-}
+    margin-bottom: 2rem;
+    &.site-header {
+        padding: 3rem 5vh;
+        font-size: larger;
 
-header.site-header {
-    padding: 3rem 5vh;
-    font-size: larger;
-
-    svg {
-        height: 32px;
-        width: 32px;
-    }
-
-    .site-nav {
-        max-width: 80rem;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-
-
-    }
-
-    .menu {
-        display: flex;
-        list-style: none;
-        padding: 0;
-
-        a {
-            display: block;
-            padding: 1rem;
-        }
-    }
-
-    .site-menu {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-
-
-    .logo {
-        font-size: 2rem;
-        font-weight: bold;
-        text-decoration: none;
-        padding: 0;
+        background-color: $header-background;
         margin: 0;
-        
-    }
-}
+        a {
+            text-decoration: none;
+        }
+        li {
+            list-style: none;
+        }
+        border-radius: 0 0 1rem 1rem;
 
-@media screen and (max-width: 992px) {
-    header.site-header {
+        svg {
+            height: 32px;
+            width: 32px;
+            color: $link-color;
+            &:hover {
+                color: $link-hover-color;
+            }
+        }
+
         .site-nav {
-            flex-wrap: wrap;
-            max-width: 96rem;
+            max-width: 80rem;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
@@ -70,21 +35,39 @@ header.site-header {
 
         }
 
+        .menu {
+            display: flex;
+            list-style: none;
+            padding: 0;
+
+            a {
+                display: block;
+                padding: 1rem;
+            }
+        }
+
         .site-menu {
             justify-content: center;
             flex-wrap: wrap;
         }
 
-        .links-menu {
-            display: none;
+
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 0;
+            margin: 0;
+            
         }
     }
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 576px) {
     header.site-header {
         .site-nav {
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
         }
     }
 }

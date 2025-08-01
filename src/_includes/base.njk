@@ -15,6 +15,7 @@
         <meta charset="UTF-8"/>
         <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/assets/css/styles.css">
         <link rel="canonical" href="{{ meta.url }}{{ page.url }}"/>
         <link rel="alternate" hreflang="{{ page.lang }}" href="{{ meta.url }}{{ page.url }}"/>
 
@@ -22,13 +23,10 @@
         <!-- IMPORTATIONS -->
         {% for link in page.url | locale_links %}
             <link rel="alternate" hreflang="{{ link.lang }}" href="{{ meta.url }}{{ link.url }}"/>
-        {% endfor %}
-        <script type="module" src="/scripts/main.js"></script>
-        <link rel="stylesheet" href="/assets/css/styles.css">
-    </head>
+        {% endfor %}</head>
     <body>
         {% include "components/header.njk" %}
-        <main class="mx-auto main-container">
+        <main>
             {{ content | safe }}
         </main>
         {% include "components/footer.njk" %}

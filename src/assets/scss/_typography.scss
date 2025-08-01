@@ -3,20 +3,28 @@
 @import "https://fonts.googleapis.com/icon?family=Material+Icons";
 
 
+.light {
+    color: #a6adc8
+}
 
-a {
+body {
+    font-family: "Atkinson Hyperlegible", sans-serif;
+    color: $text-color;
+}
+
+a, a > svg {
     font-weight: bolder;
     color: $link-color;
     &:hover {
         color: $link-hover-color;
         text-decoration: none;
     }
+    
 }
 
 header, main, footer {
     font-family: "Atkinson Hyperlegible", sans-serif;
 }
-
 main {
     font-family: "Atkinson Hyperlegible", sans-serif;
     
@@ -24,8 +32,6 @@ main {
         line-height: 1.8;
     }
     h1, h2, h3, h4, h5, h6 {
-        margin-top: .75rem;
-        margin-bottom: .25rem;
         font-weight: bolder;
     }
     h1 {
@@ -58,4 +64,8 @@ main {
             font-size: 1.125rem;
         }
     }
+}
+
+s {
+    color: $error-color;
 }

@@ -23,7 +23,7 @@ export default function (eleventyConfig) {
       }));
 
 	eleventyConfig.addPassthroughCopy({ "./src/assets/css/styles.min.css": "/assets/css/styles.css" });
-	eleventyConfig.addPassthroughCopy({ "./src/assets/img": "/assets/img" });
+	eleventyConfig.addPassthroughCopy({ "./src/assets/images": "/assets/images" });
 
 
 	eleventyConfig.addCollection('projects-en', function (collectionApi) {

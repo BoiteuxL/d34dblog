@@ -9,8 +9,10 @@ tags:
 ---
 {% import "macros/media.njk" as media %}
 
-# [{{title}}]({{repository}})
-{{description}}
+# {{title}}
+{{description}} [Github]({{repository}})
+
+---
 
 ## Résumé
 Mes fichiers de configuration personnels pour GNU/Linux, spécifiquement adaptés à l'environnement de bureau Gnome. Ces fichiers incluent des paramètres et des personnalisations qui améliorent mon flux de travail quotidien et mon expérience utilisateur tout en offrant une belle interface graphique.
@@ -26,14 +28,14 @@ J'utilise le thème Catppuccin Mocha avec l'accent mauve, ce qui me permet d'avo
 
 De plus, je suis un grand fan de Star Wars, alors, pour mon ordinateur portable (nommé *Acclamator*), j'ai ajouté un petit fond d'écran mettant en vedette le *vaisseau d'assaut de classe Acclamator*.
 {{ media.image(
-    "/assets/img/projects/dotfiles/laptop.png",
+    "/assets/images/projects/dotfiles/laptop.png",
     "Capture d'écran de mon ordinateur portable",
     "Capture d'écran de mon ordinateur portable"
 ) }}
 
 Et pour mon ordinateur de bureau (nommé *Venator*), j'ai un fond d'écran mettant en vedette le *Destroyer stellaire de classe Venator*.
 {{ media.image(
-    "/assets/img/projects/dotfiles/desktop.png",
+    "/assets/images/projects/dotfiles/desktop.png",
     "Capture d'écran de mon ordinateur de bureau",
     "Capture d'écran de mon ordinateur de bureau"
 ) }}
