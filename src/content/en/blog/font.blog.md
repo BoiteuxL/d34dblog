@@ -4,12 +4,12 @@ modified-on: 2025-08-01T19:53
 tags:
   - Article
   - Website/Blog
-title: The Bests Fonts
+title: The Best Fonts
 permalink: /{{language}}/blog/fonts/
 language: en
 ---
 
-# The Bests Fonts
+# The Best Fonts
 
 ---
 <p></p>
