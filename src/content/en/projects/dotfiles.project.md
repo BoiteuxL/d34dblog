@@ -1,9 +1,8 @@
 ---
 title: "Dotfiles"
 description: "Configuration files for GNU/Linux (Gnome)."
-permalink: /{{language}}/projects/dotfiles/
+permalink: /{{locale.code}}/projects/dotfiles/
 repository: "https://github.com/BoiteuxL/dotfiles"
-language: en
 tags:
   - Article
   - Website/Project

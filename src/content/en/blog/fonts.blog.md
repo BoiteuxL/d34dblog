@@ -5,8 +5,7 @@ tags:
   - Article
   - Website/Blog
 title: The Best Fonts
-permalink: /{{language}}/blog/fonts/
-language: en
+permalink: /{{locale.code}}/blog/fonts/
 ---
 
 # The Best Fonts
@@ -35,7 +34,7 @@ For the "mono" font, which is the fixed-width one used in code editors, I went w
 <pre class="code-snippet">
     <code>
 <span class="purple">function</span> <span class="blue">greet</span>(<span class="red">name</span>: <span class="purple">string</span>): <span class="purple">string</span> {
-<span class="purple">return</span> <span class="green">`Hello, <span class="grey">${</span><span class="red">name</span><span class="grey">}</span>!`</span><span class="grey">;</span>
+  <span class="purple">return</span> <span class="green">`Hello, <span class="grey">${</span><span class="red">name</span><span class="grey">}</span>!`</span><span class="grey">;</span>
 
 }
 

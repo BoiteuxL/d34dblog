@@ -7,7 +7,7 @@ export default {
   },
   fr: {
     dir: 'ltr',
-    availableText: 'Cette page est également disponible en :',
+    availableText: 'Cette page est également disponible en:',
     code: "fr"
   },
 };

@@ -6,9 +6,8 @@ tags:
   - Website/Project
 title: D34dBlog
 description: Site web et blog personnel.
-permalink: /{{lang}}/projects/d34dblog/
+permalink: /{{locale.code}}/projects/d34dblog/
 repository: https://github.com/BoiteuxL/d34dblog
-language: fr
 ---
 
 # D34dBlog

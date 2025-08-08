@@ -8,7 +8,7 @@ permalink: /fr/blog/
 <p>L'endroit où je parle de tout ce qui me passe par la tête.</p>
 <hr>
 <section>
-    {%- for post in collections["blogposts-fr"] -%}
+    {%- for post in collections["blogposts_fr"] -%}
     <article>
         <h3><a href="{{post.url}}">{{ post.data.title }}</a></h3>
         <em><time datetime="{{ post.data["modified-on"] }}">{{ post.data["modified-on"] | formatDate('fr-CA') }}</time></em>

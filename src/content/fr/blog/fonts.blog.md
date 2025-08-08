@@ -30,7 +30,7 @@ Pour la police dite "mono", soit celle de largeur fixe utilisée par les éditeu
 <pre class="code-snippet">
     <code>
 <span class="purple">function</span> <span class="blue">greet</span>(<span class="red">name</span>: <span class="purple">string</span>): <span class="purple">string</span> {
-<span class="purple">return</span> <span class="green">`Hello, <span class="grey">${</span><span class="red">name</span><span class="grey">}</span>!`</span><span class="grey">;</span>
+  <span class="purple">return</span> <span class="green">`Hello, <span class="grey">${</span><span class="red">name</span><span class="grey">}</span>!`</span><span class="grey">;</span>
 
 }
 

@@ -26,34 +26,26 @@ export default function (eleventyConfig) {
 	eleventyConfig.addPassthroughCopy({ "./src/assets/images": "/assets/images" });
 
 
-	eleventyConfig.addCollection('projects-en', function (collectionApi) {
-		return collectionApi.getAll().filter(item => {
-			return item.data.tags && item.data.language === 'en' && item.data.tags.includes('Website/Project');
-		}).sort((a, b) => {
+	eleventyConfig.addCollection('projects_en', function (collectionApi) {
+		return collectionApi.getFilteredByGlob("./src/content/en/projects/*.project.md").sort((a, b) => {
 			return a.data.title.localeCompare(b.data.title)
 		});
 	});
 
-	eleventyConfig.addCollection('projects-fr', function (collectionApi) {
-		return collectionApi.getAll().filter(item => {
-			return item.data.tags && item.data.language === 'fr' && item.data.tags.includes('Website/Project');
-		}).sort((a, b) => {
+	eleventyConfig.addCollection('projects_fr', function (collectionApi) {
+		return collectionApi.getFilteredByGlob("./src/content/fr/projects/*.project.md").sort((a, b) => {
 			return a.data.title.localeCompare(b.data.title)
 		});
 	});
 
-		eleventyConfig.addCollection('blogposts-en', function (collectionApi) {
-		return collectionApi.getAll().filter(item => {
-			return item.data.tags && item.data.language === 'en' && item.data.tags.includes('Website/Blog');
-		}).sort((a, b) => {
+		eleventyConfig.addCollection('blogposts_en', function (collectionApi) {
+		return collectionApi.getFilteredByGlob("./src/content/en/blog/*.blog.md").sort((a, b) => {
 			return (new Date(a.data["modified-on"]).getTime - new Date(b.data["modified-on"]).getTime)
 		});
 	});
 
-	eleventyConfig.addCollection('blogposts-fr', function (collectionApi) {
-		return collectionApi.getAll().filter(item => {
-			return item.data.tags && item.data.language === 'fr' && item.data.tags.includes('Website/Blog');
-		}).sort((a, b) => {
+	eleventyConfig.addCollection('blogposts_fr', function (collectionApi) {
+		return collectionApi.getFilteredByGlob("./src/content/fr/blog/*.blog.md").sort((a, b) => {
 			return (new Date(a.data["modified-on"]).getTime - new Date(b.data["modified-on"]).getTime)
 		});
 	});
